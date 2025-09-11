@@ -2,7 +2,13 @@
 
 <template>
   <footer class="footer">
-    NATÁLIA FIGUEIREDO - Fotógrafa Retratista de Posicionamento Estratégico
+    NATÁLIA FIGUEIREDO | Posicionamento Estratégico
+    <br />
+    Fotografa Retratista em Goiânia-GO e Região.
+    <br />
+    contato@nath.com
+    <br />
+    62 991596791
   </footer>
 </template>
 
