@@ -1,14 +1,27 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const scrollTo = (id: string, offset = 80) => {
+  const el = document.getElementById(id)
+  if (el) {
+    const top = el.getBoundingClientRect().top + window.pageYOffset - offset
+
+    console.log(top)
+    window.scrollTo({
+      top,
+      behavior: 'smooth',
+    })
+  }
+}
+</script>
 
 <template>
   <header>
     <nav>
       <ul>
-        <li><a href="#">Coiso</a></li>
-        <li><a href="#">Coiso</a></li>
+        <li><a href="javascript:void(0)" @click="scrollTo('item-1')">Coiso</a></li>
+        <li><a href="javascript:void(0)" @click="scrollTo('item-2')">Coiso</a></li>
         <li><img src="@/assets/images/logo.png" /></li>
-        <li><a href="#" class="active">Coiso</a></li>
-        <li><a href="#">Coiso</a></li>
+        <li><a href="javascript:void(0)" @click="scrollTo('item-3')" class="active">Coiso</a></li>
+        <li><a href="javascript:void(0)" @click="scrollTo('item-4')">Coiso</a></li>
       </ul>
     </nav>
   </header>
@@ -49,7 +62,7 @@ header {
   }
 
   li > a {
-    color: var(--text-muted);
+    color: black;
     text-decoration: none;
 
     &.active {
