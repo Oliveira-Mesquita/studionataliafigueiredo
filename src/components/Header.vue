@@ -6,7 +6,7 @@
       <ul>
         <li><a href="#">Coiso</a></li>
         <li><a href="#">Coiso</a></li>
-        <li><img src="https://picsum.photos/100/100" /></li>
+        <li><img src="@/assets/images/logo.png" /></li>
         <li><a href="#" class="active">Coiso</a></li>
         <li><a href="#">Coiso</a></li>
       </ul>
@@ -41,10 +41,11 @@ header {
     align-items: center;
     gap: 30px;
     list-style: none;
+    padding: 0;
   }
 
   li > img {
-    width: 48px;
+    width: 250px;
   }
 
   li > a {
