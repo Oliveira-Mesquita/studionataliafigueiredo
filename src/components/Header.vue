@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import IconButton from '@/components/IconButton.vue'
+
+defineEmits(['openMenu'])
+
 const scrollTo = (id: string, offset = 80) => {
   const el = document.getElementById(id)
   if (el) {
@@ -17,29 +21,39 @@ const scrollTo = (id: string, offset = 80) => {
   <header>
     <nav>
       <ul>
-        <li><a href="javascript:void(0)" @click="scrollTo('item-1')">Coiso</a></li>
-        <li><a href="javascript:void(0)" @click="scrollTo('item-2')">Coiso</a></li>
+        <li class="desktop-only">
+          <a href="javascript:void(0)" @click="scrollTo('item-1')">Coiso</a>
+        </li>
+        <li class="desktop-only">
+          <a href="javascript:void(0)" @click="scrollTo('item-2')">Coiso</a>
+        </li>
         <li><img src="@/assets/images/logo.png" /></li>
-        <li><a href="javascript:void(0)" @click="scrollTo('item-3')" class="active">Coiso</a></li>
-        <li><a href="javascript:void(0)" @click="scrollTo('item-4')">Coiso</a></li>
+        <li class="desktop-only">
+          <a href="javascript:void(0)" @click="scrollTo('item-3')" class="active">Coiso</a>
+        </li>
+        <li class="desktop-only">
+          <a href="javascript:void(0)" @click="scrollTo('item-4')">Coiso</a>
+        </li>
+        <li class="mobile-only">
+          <IconButton icon-name="menu" @click="$emit('openMenu')" />
+        </li>
       </ul>
     </nav>
   </header>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 header {
   position: fixed;
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: 15px 0;
   height: var(--header-height);
-
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  padding: 1rem;
 
   nav {
     display: flex;
@@ -55,6 +69,7 @@ header {
     gap: 30px;
     list-style: none;
     padding: 0;
+    margin: 0;
   }
 
   li > img {

@@ -23,3 +23,26 @@ body {
   top: 0;
   margin: 0;
 }
+
+
+/* Desktop */
+@media (min-width: 769px) {
+  .desktop-only {
+    display: block;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}

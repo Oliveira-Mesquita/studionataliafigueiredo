@@ -2,10 +2,19 @@
 import Header from '@/components/Header.vue'
 import '@/assets/css/global.css'
 import Footer from '@/components/Footer.vue'
+import Menu from '@/components/Menu.vue'
+import { ref } from 'vue'
+
+const showMenu = ref(false)
+
+function openMenu() {
+  showMenu.value = true
+}
 </script>
 
 <template>
-  <Header></Header>
+  <Menu v-model="showMenu"></Menu>
+  <Header @open-menu="openMenu"></Header>
 
   <main>
     <div
@@ -44,6 +53,7 @@ main {
   * {
     max-width: var(--content-container);
     margin: auto;
+    padding: 0 30px;
   }
 
   &--primary {
