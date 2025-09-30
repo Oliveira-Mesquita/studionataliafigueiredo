@@ -17,7 +17,20 @@ function openMenu() {
   <Header @open-menu="openMenu"></Header>
 
   <main>
-    <div
+    <section class="container content">
+      <div class="content__carrousel">
+        <div class="content__ad">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at cupiditate
+            eligendi ex labore nemo nihil odio, perferendis porro sapiente sit tempore totam ut
+            voluptatem voluptates. Enim iure nesciunt sed.
+          </p>
+          <button>Entre em contato!</button>
+        </div>
+      </div>
+    </section>
+
+    <section
       v-for="i in 10"
       :key="i"
       :class="{ 'container--primary': i % 2 !== 0 }"
@@ -35,7 +48,7 @@ function openMenu() {
         ex, fugit labore perspiciatis provident quia suscipit vero! Ad enim eveniet ex incidunt modi
         natus nisi, quae reiciendis sunt vel. Est?
       </p>
-    </div>
+    </section>
   </main>
 
   <Footer />
@@ -50,7 +63,7 @@ main {
 .container {
   padding: 50px 0;
 
-  * {
+  > * {
     max-width: var(--content-container);
     margin: auto;
     padding: 0 30px;
@@ -59,5 +72,38 @@ main {
   &--primary {
     background-color: var(--primary);
   }
+}
+
+.content {
+  &__carrousel {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    background: url('https://picsum.photos/1920/1080');
+    background-size: cover;
+    padding: 30px;
+    border-radius: 5px;
+  }
+
+  &__ad {
+    width: 50%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: start;
+  }
+}
+
+button {
+  cursor: pointer;
+  width: fit-content;
+  background-color: #536b80;
+  color: white;
+  border: none;
+  padding: 20px 30px;
+  border-radius: 5px;
+  text-transform: uppercase;
 }
 </style>
