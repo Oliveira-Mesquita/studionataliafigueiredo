@@ -5,7 +5,7 @@
     <div class="content">
       <h1 class="title">Natália Figueiredo</h1>
       <p class="subtitle">Slogan</p>
-      <button class="cta" @click="scrollToPortfolio">Ação</button>
+      <button @click="scrollToPortfolio">Ação</button>
     </div>
   </section>
 </template>
@@ -57,23 +57,5 @@ function scrollToPortfolio() {
   font-size: 1.25rem;
   margin-bottom: 2rem;
   line-height: 1.5;
-}
-
-.cta {
-  background-color: #42b883;
-  border: none;
-  padding: 0.9rem 2rem;
-  font-size: 1.1rem;
-  color: #fff;
-  border-radius: 40px;
-  cursor: pointer;
-  transition:
-    background-color 0.3s,
-    transform 0.2s;
-}
-
-.cta:hover {
-  background-color: #2f8f6f;
-  transform: translateY(-2px);
 }
 </style>
