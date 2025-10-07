@@ -1,0 +1,17 @@
+:root {
+  --header-height: 80px;
+  --content-container: 750px;
+
+  --primary: #536b80;
+  --text-muted: #8c8c8c;
+}
+
+// ╔══════════════════════════╗
+// ║       BREAKPOINTS        ║
+// ╚══════════════════════════╝
+
+$breakpoint-xs: 320px; // Smartphones Pequenos
+$breakpoint-sm: 480px; // Smartphones
+$breakpoint-md: 768px; // Tablets
+$breakpoint-lg: 1024px; // Desktops
+$breakpoint-xl: 1440px; // Desktops Grandes
