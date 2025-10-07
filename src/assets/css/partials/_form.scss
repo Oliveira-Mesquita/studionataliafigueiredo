@@ -1,0 +1,32 @@
+input[type='text'], input[type='email'], textarea {
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type='text']:focus, input[type='email']:focus,
+textarea:focus {
+  border-color: #42b883;
+}
+
+button {
+  background-color: #42b883;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+}
+
+button:hover {
+  background-color: #2f8f6f;
+  transform: translateY(-2px);
+}

@@ -23,7 +23,7 @@ function openMenu() {
     <hero />
 
     <!-- Sobre mim -->
-    <section class="container container--primary content">
+    <section class="container content">
       <div class="presentation">
         <div class="presentation__image-container">
           <img class="presentation__image" src="https://picsum.photos/1920/1080" alt="" />
@@ -46,12 +46,14 @@ function openMenu() {
     </section>
 
     <!-- Galeria -->
-    <section class="container">
+    <section class="container container--primary">
       <PreviewGallery />
     </section>
 
     <!-- Contato -->
-    <Contact />
+    <section class="container">
+      <Contact />
+    </section>
   </main>
 
   <Footer />
@@ -73,7 +75,7 @@ main {
   }
 
   &--primary {
-    background-color: var(--primary);
+    background-color: var(--primary-surface);
   }
 }
 
