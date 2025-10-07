@@ -1,10 +1,10 @@
 <template>
   <section class="hero">
-    <div class="overlay"></div>
+    <div class="hero__overlay"></div>
 
-    <div class="content">
-      <h1 class="title">Natália Figueiredo</h1>
-      <p class="subtitle">Slogan</p>
+    <div class="hero__content">
+      <h1 class="hero__title">Natália Figueiredo</h1>
+      <p class="hero__subtitle">Slogan</p>
       <button @click="scrollToPortfolio">Ação</button>
     </div>
   </section>
@@ -17,7 +17,7 @@ function scrollToPortfolio() {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .hero {
   position: relative;
   height: 40vh;
@@ -29,33 +29,33 @@ function scrollToPortfolio() {
   align-items: center;
   color: #fff;
   overflow: hidden;
-}
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(2px);
-}
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(2px);
+  }
 
-.content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  max-width: 600px;
-  padding: 0 20px;
-}
+  &__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 600px;
+    padding: 0 20px;
+  }
 
-.title {
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 1rem;
-}
+  &__title {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
 
-.subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  line-height: 1.5;
+  &__subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
 }
 </style>
