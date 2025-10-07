@@ -1,18 +1,7 @@
-@import "_variables.scss";
+@import "./partials/_variables";
+@import "./partials/_typography";
 
-@font-face {
-  font-family: 'GowunBatang';
-  src: url('/public/fonts/GowunBatang-Regular.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'GowunBatang';
-  src: url('/public/fonts/GowunBatang-Bold.ttf');
-  font-weight: bold;
-  font-style: normal;
-}
 
 html {
   scroll-behavior: smooth;
@@ -23,7 +12,6 @@ body {
   top: 0;
   margin: 0;
 }
-
 
 /* Desktop */
 @media (min-width: 769px) {

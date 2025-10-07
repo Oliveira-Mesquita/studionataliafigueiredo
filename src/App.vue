@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Header from '@/components/Header.vue'
-import '@/assets/css/global.css'
+import '@/assets/css/global.scss'
 import Footer from '@/components/Footer.vue'
 import Menu from '@/components/Menu.vue'
 import { ref } from 'vue'
