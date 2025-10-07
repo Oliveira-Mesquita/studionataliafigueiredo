@@ -54,6 +54,7 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  z-index: 99;
 
   nav {
     display: flex;

@@ -5,6 +5,7 @@ import Footer from '@/components/Footer.vue'
 import Menu from '@/components/Menu.vue'
 import { ref } from 'vue'
 import PreviewGallery from '@/components/custom/PreviewGallery.vue'
+import Hero from '@/components/custom/Hero.vue'
 
 const showMenu = ref(false)
 
@@ -18,18 +19,7 @@ function openMenu() {
   <Header @open-menu="openMenu"></Header>
 
   <main>
-    <section class="container content">
-      <div class="content__carrousel">
-        <div class="content__ad">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at cupiditate
-            eligendi ex labore nemo nihil odio, perferendis porro sapiente sit tempore totam ut
-            voluptatem voluptates. Enim iure nesciunt sed.
-          </p>
-          <button>Entre em contato!</button>
-        </div>
-      </div>
-    </section>
+    <hero />
 
     <!-- Sobre mim -->
     <section class="container container--primary content">
