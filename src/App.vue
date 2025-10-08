@@ -21,20 +21,22 @@ function toggleMenu() {
   <Header @toggle-menu="toggleMenu"></Header>
 
   <main>
-    <Hero />
+    <section v-scroll-reveal>
+      <Hero />
+    </section>
 
     <!-- Sobre mim -->
-    <section class="container">
+    <section class="container" v-scroll-reveal>
       <Presentation />
     </section>
 
     <!-- Galeria -->
-    <section class="container container--primary">
+    <section class="container container--primary" v-scroll-reveal>
       <PreviewGallery />
     </section>
 
     <!-- Contato -->
-    <section class="container">
+    <section class="container" v-scroll-reveal>
       <Contact />
     </section>
   </main>
