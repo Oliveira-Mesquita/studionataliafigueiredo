@@ -5,12 +5,15 @@
     <div class="hero__content">
       <h1 class="hero__title">Natália Figueiredo</h1>
       <p class="hero__subtitle">Slogan</p>
-      <button @click="scrollToPortfolio">Ação</button>
+      <LiquidButton label="Agendar Ensaio"></LiquidButton>
+      <!--      <button @click="scrollToPortfolio">Ação</button>-->
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import LiquidButton from '@/components/LiquidButton.vue'
+
 function scrollToPortfolio() {
   const section = document.getElementById('portfolio')
   section?.scrollIntoView({ behavior: 'smooth' })
@@ -20,7 +23,7 @@ function scrollToPortfolio() {
 <style lang="scss" scoped>
 .hero {
   position: relative;
-  height: 40vh;
+  height: calc(100vh - var(--header-height));
   width: 100%;
   background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover
     no-repeat;
