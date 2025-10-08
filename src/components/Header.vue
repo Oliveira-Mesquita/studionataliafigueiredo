@@ -45,7 +45,7 @@ const scrollTo = (id: string, offset = 80) => {
 <style scoped lang="scss">
 header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   padding: 15px 0;

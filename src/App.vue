@@ -17,14 +17,14 @@ function openMenu() {
 </script>
 
 <template>
-  <Menu v-model="showMenu"></Menu>
+  <!--  <Menu v-model="showMenu"></Menu>-->
   <Header @open-menu="openMenu"></Header>
 
   <main>
-    <hero />
+    <Hero />
 
     <!-- Sobre mim -->
-    <section class="container content">
+    <section class="container">
       <Presentation />
     </section>
 
@@ -43,6 +43,8 @@ function openMenu() {
 </template>
 
 <style scoped lang="scss">
+@use '/src/assets/css/partials/variables' as *;
+
 main {
   padding-top: calc(var(--header-height) + 30px);
   margin: 0 auto;
@@ -50,6 +52,8 @@ main {
 
 .container {
   padding: 50px 0;
+  width: 100vw;
+  overflow-x: auto;
 
   > * {
     max-width: var(--content-container);
@@ -81,6 +85,15 @@ main {
     flex-direction: column;
     gap: 30px;
     justify-content: start;
+  }
+}
+
+/* Responsivo */
+@media (max-width: $breakpoint-md) {
+  .container {
+    > * {
+      padding: 0 calc(var(--density) * 2);
+    }
   }
 }
 </style>

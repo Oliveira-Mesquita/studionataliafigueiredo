@@ -50,7 +50,7 @@ function closeMenu() {
 
 nav {
   position: fixed;
-  width: 100dvw;
+  width: 100vw;
   height: 100dvh;
   opacity: 0;
   visibility: hidden;
