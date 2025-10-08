@@ -11,14 +11,14 @@ import Presentation from '@/components/custom/Presentation.vue'
 
 const showMenu = ref(false)
 
-function openMenu() {
-  showMenu.value = true
+function toggleMenu() {
+  showMenu.value = !showMenu.value
 }
 </script>
 
 <template>
-  <!--  <Menu v-model="showMenu"></Menu>-->
-  <Header @open-menu="openMenu"></Header>
+  <Menu v-model="showMenu"></Menu>
+  <Header @toggle-menu="toggleMenu"></Header>
 
   <main>
     <Hero />

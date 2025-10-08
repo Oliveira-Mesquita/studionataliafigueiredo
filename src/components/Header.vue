@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import IconButton from '@/components/IconButton.vue'
 
-defineEmits(['openMenu'])
+defineEmits(['toggleMenu'])
 
 const scrollTo = (id: string, offset = 80) => {
   const el = document.getElementById(id)
@@ -35,7 +35,7 @@ const scrollTo = (id: string, offset = 80) => {
           <a href="javascript:void(0)" @click="scrollTo('item-4')">Coiso</a>
         </li>
         <li class="mobile-only">
-          <IconButton icon-name="menu" @click="$emit('openMenu')" />
+          <IconButton icon-name="menu" @click="$emit('toggleMenu')" />
         </li>
       </ul>
     </nav>
