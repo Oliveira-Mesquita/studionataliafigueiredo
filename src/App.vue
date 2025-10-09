@@ -8,6 +8,7 @@ import PreviewGallery from '@/components/custom/PreviewGallery.vue'
 import Hero from '@/components/custom/Hero.vue'
 import Contact from '@/components/custom/Contact.vue'
 import Presentation from '@/components/custom/Presentation.vue'
+import { presentation } from '@/data.ts'
 
 const showMenu = ref(false)
 
@@ -27,7 +28,11 @@ function toggleMenu() {
 
     <!-- Sobre mim -->
     <section class="container" v-scroll-reveal>
-      <Presentation />
+      <Presentation
+        :title="presentation.title"
+        :description="presentation.description"
+        :photo="presentation.photo"
+      />
     </section>
 
     <!-- Galeria -->
