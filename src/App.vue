@@ -31,7 +31,7 @@ function toggleMenu() {
     </section>
 
     <!-- Galeria -->
-    <section class="container container--primary" v-scroll-reveal>
+    <section class="container container--primary container--full" v-scroll-reveal>
       <PreviewGallery />
     </section>
 
@@ -54,7 +54,6 @@ main {
 
 .container {
   padding: 50px 0;
-  width: 100vw;
   overflow-x: auto;
 
   > * {
@@ -65,6 +64,13 @@ main {
 
   &--primary {
     background-color: var(--primary-surface);
+  }
+
+  &--full {
+    > * {
+      max-width: none;
+      padding: 0 var(--density);
+    }
   }
 }
 
