@@ -1,7 +1,7 @@
-@import "./partials/_variables";
-@import "./partials/_typography";
-@import "./partials/_form";
-@import "./partials/_scroll";
+@use "./partials/_variables";
+@use "./partials/_typography";
+@use "./partials/_form";
+@use "./partials/_scroll";
 
 html {
   scroll-behavior: smooth;
