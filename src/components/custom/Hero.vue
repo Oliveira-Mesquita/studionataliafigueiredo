@@ -23,12 +23,11 @@ function scrollToPortfolio() {
 <style lang="scss" scoped>
 .hero {
   position: relative;
-  height: calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height) - 200px);
   width: 100%;
-  background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover
-    no-repeat;
+  background: url('/images/photos/self/photo-1.jpg') top/cover no-repeat;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   color: #fff;
   overflow: hidden;
@@ -36,8 +35,8 @@ function scrollToPortfolio() {
   &__overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(2px);
+    //background: rgba(0, 0, 0, 0.45);
+    //backdrop-filter: blur(2px);
   }
 
   &__content {
@@ -46,6 +45,7 @@ function scrollToPortfolio() {
     text-align: center;
     max-width: 600px;
     padding: 0 20px;
+    margin: 0 100px;
   }
 
   &__title {

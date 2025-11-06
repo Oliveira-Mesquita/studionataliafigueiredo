@@ -73,7 +73,7 @@ main {
 
   &--full {
     > * {
-      max-width: none;
+      max-width: calc(var(--content-container) + 100px);
       padding: 0 var(--density);
     }
   }
