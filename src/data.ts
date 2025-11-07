@@ -8,5 +8,5 @@ export const presentation: Presentation = {
     '“Eu não clico uma foto apenas pela estética. Clico a história que você quer contar — e como o mundo precisa te ver.”\n' +
     '📍 Atendimento em Goiânia | Agendamentos por WhatsApp e chamadas online.\n' +
     'Quem se posiciona, não compete. Se destaca.',
-  photo: 'src/assets/images/photo.png',
+  photo: './images/photos/self/photo.png',
 }
